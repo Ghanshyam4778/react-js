@@ -1,0 +1,23 @@
+.overabout{
+    position:absolute;
+    top: 40%;
+    left: 10%;
+    color: white;
+}
+.overabout h1{
+    width: 50%;
+}
+.overabout p{
+    width: 40%;
+}
+.overabout button{
+    font-size: 20px;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 30px;
+    background-color: bisque;
+}
+.overabout button:hover{
+    color: white;
+    background-color: black;
+}

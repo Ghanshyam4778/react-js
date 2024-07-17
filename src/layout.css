@@ -1,0 +1,103 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #cac2c2;
+}
+img{
+    width: 100%;
+}
+.Logo{
+    width: 50px;
+}
+nav div ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+nav div li{
+    list-style-type: none;
+   margin:0px 10px
+}
+nav div li a{
+    color: black;
+    text-decoration: none;
+    transition: 0.5s;
+    font-size: 20px;
+}
+nav ul li a:hover{
+    background-color: rgb(189, 34, 34);
+    color:white;
+    border-radius: 10px;
+    padding: 0 10px;
+}
+
+.btn {
+    --border-radius: 15px;
+    --border-width: 4px;
+    appearance: none;
+    position: relative;
+    padding: 10px 20px;
+    border: 0;
+    background-color:#cac2c2;
+    font-family: "Roboto", Arial, "Segoe UI", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    z-index: 2;
+     font-weight: bold;
+}
+nav ul .btn .login:hover{
+    background-color:  #cac2c2;
+    color: black;
+   }
+  .login::after {
+    
+    --m-i: linear-gradient(#000, #000);
+    --m-o: content-box, padding-box;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: var(--border-width);
+    border-radius: var(--border-radius);
+    background-image: conic-gradient(
+           #488cfb,
+           #29dbbc,
+           #ddf505,
+           #ff9f0e,
+           #e440bb,
+           #655adc,
+           #488cfb
+       );
+    -webkit-mask-image: var(--m-i), var(--m-i);
+    mask-image: var(--m-i), var(--m-i);
+    -webkit-mask-origin: var(--m-o);
+    mask-origin: var(--m-o);
+    -webkit-mask-clip: var(--m-o);
+    mask-composite: exclude;
+    -webkit-mask-composite: destination-out;
+    filter: hue-rotate(0);
+    animation: rotate-hue linear 500ms infinite;
+    animation-play-state: paused;
+   }
+   
+  .login:hover::after {
+    animation-play-state: running;
+   }
+   
+   @keyframes rotate-hue {
+    to {
+     filter: hue-rotate(1turn);
+    }
+   }
+   
+  .login,
+  .login::after {
+    box-sizing: border-box;
+   }
+   
+  .login:active {
+    --border-width: 5px;
+   }
